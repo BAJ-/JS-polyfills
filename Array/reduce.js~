@@ -1,0 +1,27 @@
+/**
+ * Detailed explanation of the code can be found here: http://javascript.boxsheep.com/polyfills/Array-prototype-reduce/
+ *
+ * NOTE: This is not one big polyfill but several ways to write the same polyfill.
+ */
+
+// Array.prototype.reduce using for-loop
+if (!Array.prototype.reduce) {
+    Array.prototype.reduce = function(callbackfn, initVal) {
+        "use strict";
+        var arr = this,
+            arrLen = arr.length,
+            k = 0,
+            accumulator = initVal === undefined ? undefined : initVal;
+ 
+        for(;k < arrLen;k++) {
+            if (accumulator !== undefined && k in arr) {
+                accumulator = callbackfn.call(undefined, accumulator, arr[k], k, arr);
+            } else {
+                accumulator = arr[k];
+            }
+        }
+        return accumulator;
+    };
+}
+
+// ECMAScript 5.1 compliant version (check the step by step guide on the website)

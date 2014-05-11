@@ -1,0 +1,26 @@
+/**
+ * Detailed explanation of the code can be found here: http://javascript.boxsheep.com/polyfills/Array-prototype-every/
+ *
+ * NOTE: this is not one big polyfill but several ways to write the same polyfill.
+ */
+
+// Array.prototype.every using for-loop
+if (!Array.prototype.every) {
+    Array.prototype.every = function (fn, thisArg) {
+        "use strict";
+        var arr = this,
+            arrLen = arr.length,
+            i,
+            T = thisArg ? thisArg : undefined;
+        
+        for (i = 0; i < arrLen; i += 1) {
+            if (!fn.call(T, arr[i], i, arr)) {
+                return false;
+            }
+        }
+        return true;
+    };
+}
+
+// Array.prototype.every using recursion
+
