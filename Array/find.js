@@ -5,7 +5,10 @@
  * NOTE: This is not one big polyfill but several ways to write the same polyfill.
  */
 
-// Array.prototype.find using for-loop
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * Array.prototype.find using for-loop
+ */
 if (!Array.prototype.find) {
     Array.prototype.find = function (callback, thisArg) {
         "use strict";
@@ -21,7 +24,10 @@ if (!Array.prototype.find) {
     };
 }
 
-// Array.prototype.find using forEach
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * Array.prototype.find using forEach
+ */
 if (!Array.prototype.find) {
     Array.prototype.find = function (callback, thisArg) {
         "use strict";
@@ -34,7 +40,10 @@ if (!Array.prototype.find) {
     };
 }
 
-// Array.prototype.find using recursion
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * Array.prototype.find using recursion
+ */
 if (!Array.prototype.find) {
     Array.prototype.find = function (callback, thisArg) {
         "use strict";

@@ -4,7 +4,10 @@
  * NOTE: This is not one big polyfill but several ways to write the same polyfill.
  */
 
-// Array.prototype.forEach using for-loop
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * Array.prototype.forEach using for-loop
+ */
 if (!Array.prototype.forEach) {
     Array.prototype.forEach = function (fn, arg) {
         "use strict";
@@ -21,7 +24,10 @@ if (!Array.prototype.forEach) {
     };
 }
 
-// Array.prototype.forEach using recursion
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * Array.prototype.forEach using recursion
+ */
 if (!Array.prototype.forEach) {
     Array.prototype.forEach = function (fn, arg) {
         var arr = this,
@@ -36,7 +42,10 @@ if (!Array.prototype.forEach) {
     };
 }
 
-// ECMAScript 5.1 compliant version (check the step by step guide on the website)
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * ECMAScript 5.1 compliant version (check the step by step guide at http://javascript.boxsheep.com/polyfills/Array-prototype-forEach/)
+ */
 if (!Array.prototype.forEach) {
     Array.prototype.forEach = function (callbackfn, thisArg) {
         "use strict";

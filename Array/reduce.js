@@ -4,7 +4,10 @@
  * NOTE: This is not one big polyfill but several ways to write the same polyfill.
  */
 
-// Array.prototype.reduce using for-loop
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * Array.prototype.reduce using for-loop
+ */
 if (!Array.prototype.reduce) {
     Array.prototype.reduce = function(callbackfn, initVal) {
         "use strict";
@@ -24,7 +27,10 @@ if (!Array.prototype.reduce) {
     };
 }
 
-// ECMAScript 5.1 compliant version (check the step by step guide on the website)
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * ECMAScript 5.1 compliant version (check the step by step guide at http://javascript.boxsheep.com/polyfills/Array-prototype-reduce/)
+ */
 if (!Array.prototype.reduce) {
     Array.prototype.reduce = function(callbackfn, initialValue) {
         "use strict";

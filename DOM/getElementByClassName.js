@@ -4,7 +4,10 @@
  * NOTE: This is not one big polyfill but several ways to write the same polyfill.
  */
 
-// document.getElementsByClassName using for-loop
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * document.getElementsByClassName using for-loop
+ */
 if (document.getElementsByClassName) {
     document.getElementsByClassName = function (className) {
         "use strict";
@@ -23,7 +26,10 @@ if (document.getElementsByClassName) {
     };
 }
 
-// document.getElementsByClassName using recursion
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * document.getElementsByClassName using recursion
+ */
 if (document.getElementsByClassName) {
     document.getElementsByClassName = function (className) {
         "use strict";

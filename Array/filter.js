@@ -4,7 +4,10 @@
  * NOTE: This is not one big polyfill but several ways to write the same polyfill.
  */
 
-// Array.prototype.filter using for-loop
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * Array.prototype.filter using for-loop
+ */
 if (!Array.prototype.filter) {
     Array.prototype.filter = function (fn, context) {
         "use strict";
@@ -24,7 +27,10 @@ if (!Array.prototype.filter) {
     };
 }
 
-// ECMAScript 5.1 compliant version
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * ECMAScript 5.1 compliant version (check the step by step guide at http://javascript.boxsheep.com/polyfills/Array-prototype-filter/)
+ */
 if (!Array.prototype.filter) {
     Array.prototype.filter = function(callbackfn , thisArg) {
         "use strict";

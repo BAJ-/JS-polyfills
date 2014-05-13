@@ -3,7 +3,10 @@
  *
  */
 
-// Function.prototype.bind
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * Function.prototype.bind
+ */
 if (!Function.prototype.bind) {
     Function.prototype.bind = function (o) {
         "use strict";

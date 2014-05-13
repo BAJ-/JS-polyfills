@@ -4,7 +4,10 @@
  * NOTE: This is not one big polyfill but several ways to write the same polyfill.
  */
 
-// Array.prototype.lastIndexOf using for-loop
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * Array.prototype.lastIndexOf using for-loop
+ */
 if (!Array.prototype.lastIndexOf) {
     Array.prototype.lastIndexOf = function (elem, fIndex) {
         "use strict";
@@ -20,7 +23,10 @@ if (!Array.prototype.lastIndexOf) {
     };
 }
 
-// Array.prototype.lastIndexOf using recursion
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * Array.prototype.lastIndexOf using recursion
+ */
 if (!Array.prototype.lastIndexOf) {
     Array.prototype.lastIndexOf = function (elem, fIndex) {
         "use strict";
@@ -37,7 +43,10 @@ if (!Array.prototype.lastIndexOf) {
     };
 }
 
-// ECMAScript 5.1 compliant version (check the step by step guide on the website)
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * ECMAScript 5.1 compliant version (check the step by step guide at http://javascript.boxsheep.com/polyfills/Array-prototype-lastIndexOf/)
+ */
 if (!Array.prototype.lastIndexOf) {
     Array.prototype.lastIndexOf = function (searchElement, fromIndex) {
         "use strict";

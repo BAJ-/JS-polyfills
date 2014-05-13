@@ -4,8 +4,10 @@
  * NOTE: This is not one big polyfill but several ways to write the same polyfill.
  */
 
-// Object.create Douglas Crockford version
-// I found this on http://javascript.crockford.com/prototypal.html
+/*
+ * Object.create Douglas Crockford version
+ * I found this on http://javascript.crockford.com/prototypal.html
+ */
 if (!Object.create) {
     Object.create = function (o) {
         function F() {}
@@ -14,7 +16,10 @@ if (!Object.create) {
     };
 }
 
-// ECMAScript 5.1 compliant version (check the step by step guide on the website)
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * ECMAScript 5.1 compliant version (check the step by step guide at http://javascript.boxsheep.com/polyfills/Object-create/)
+ */
 if (!Object.create) {
     Object.create = function (O, Properties) {
         "use strict";

@@ -5,7 +5,10 @@
  * NOTE: This is not one big polyfill but several ways to write the same polyfill.
  */
 
-// String.prototype.startsWith using for-loop
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * String.prototype.startsWith using for-loop
+ */
 if (!String.prototype.startsWith) {
     String.prototype.startsWith = function (searchString, position) {
         "use strict";
@@ -28,7 +31,10 @@ if (!String.prototype.startsWith) {
     };
 }
 
-// String.prototype.startsWith using recursion
+/*
+ * By Bjorn A. Johansen @ javascript.boxsheep.com
+ * String.prototype.startsWith using recursion
+ */
 if (!String.prototype.startsWith) {
     String.prototype.startsWith = function (searchString, position) {
         "use strict";
